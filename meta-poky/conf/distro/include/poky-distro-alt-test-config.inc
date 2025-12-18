@@ -6,3 +6,4 @@ PREFERRED_VERSION_linux-yocto = "6.18%"
 
 # Ensure the kernel nfs server is enabled
 KERNEL_FEATURES:append:pn-linux-yocto = " features/nfsd/nfsd-enable.scc"
+KERNEL_FEATURES:append:pn-linux-yocto-dev = " features/nfsd/nfsd-enable.scc"
