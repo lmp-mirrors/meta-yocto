@@ -18,6 +18,8 @@ platform hdmi-sound: deferred probe pending: asoc-simple-card: parse error
 deferred probe pending: rockchip-spi: Failed to request optional TX DMA channel
 platform sound: deferred probe pending: asoc-audio-graph-card: parse error
 platform sound-dit: deferred probe pending: asoc-audio-graph-card: parse error
+# no GPU fan
+Failed to register cooling device
 
 # AMD zcu102 with u-boot 2025.10rc2 based firmware
 # optee not available on all devices
