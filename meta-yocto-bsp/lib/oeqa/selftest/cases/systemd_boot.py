@@ -60,10 +60,12 @@ class Systemdboot(OESelftestTestCase):
         if os.path.isfile(imagebootfile):
             runCmd('rm -f %s' % imagebootfile)
 
-        sysroot = get_bb_var('RECIPE_SYSROOT_NATIVE', 'wic-tools')
-
-        runCmd('wic cp %s:1/EFI/BOOT/bootx64.efi %s -n %s' % (systemdbootimage,
-                                                           imagebootfile, sysroot))
+        oldpath = os.environ['PATH']
+        os.environ['PATH'] = get_bb_var('PATH', 'wic-tools') + ':' + os.environ['PATH']
+        envfile = os.path.join(get_bb_var('STAGING_DIR', image), 'genericx86-64', 'imgdata', image) + '.env'
+        runCmd('wic cp %s:1/EFI/BOOT/bootx64.efi %s --vars %s' % (systemdbootimage,
+                                                                  imagebootfile, envfile))
+        os.environ['PATH'] = oldpath
 
         found = os.path.isfile(imagebootfile)
         self.assertTrue(found, 'bootx64.efi file %s was not copied from image'
