@@ -8,4 +8,4 @@ KMACHINE:genericx86 ?= "common-pc"
 KMACHINE:genericx86-64 ?= "common-pc-64"
 
 KBRANCH:genericarm64 ?= "v6.18/standard/genericarm64"
-SRCREV_machine:genericarm64 ?= "9e6d72474d6f996cd4ec8efac6b5ade5c9b6c2c7"
+SRCREV_machine:genericarm64 ?= "f5e9d8713f1bf70f0bacb30b1b304b09cfef8b4f"
