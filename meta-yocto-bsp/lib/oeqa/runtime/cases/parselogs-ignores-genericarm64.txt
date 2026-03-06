@@ -33,6 +33,19 @@ deferred probe pending: xilinx-psgtr: Failed to get ref clock
 # small issue in devicetree
 OPP table can't be empty
 
+# TI BeaglePlay
+# firmware device setup error
+Failed to create device link (0x180) with supplier 600000.gpio
+# USB driver error messages but stack works
+dwc3-usb: error -EINVAL: invalid resource
+dwc3-usb: can't map PHY IOMEM resource. Won't apply i2409 fix.
+# wl18xx firmware load error, not available from linux-firmware
+wl18xx_driver wl18xx.6.auto: Direct firmware load for ti-connectivity/wl18xx-conf.bin failed
+wlcore: ERROR could not get configuration binary ti-connectivity/wl18xx-conf.bin
+# Audio SOC driver error messages
+davinci-mcasp 2b10000.audio-controller: ASoC error (-22): at snd_soc_dai_hw_params
+davinci-mcasp.0-i2s-hifi: ASoC error (-22): at __soc_pcm_hw_params() on davinci-mcasp.0-i2s-hifi
+
 # NXP imx8mp verdin with u-boot 2025.10rc2
 # RTC detection issue
 oscillator failed, set time!
