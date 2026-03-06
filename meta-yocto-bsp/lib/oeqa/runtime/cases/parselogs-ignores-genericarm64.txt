@@ -10,6 +10,8 @@ Error applying setting, reverse things back
 Can't lookup blockdev
 # X11 fails to start without connected display
 modeset(0): failed to set mode: Invalid argument
+# minor USB setup issue
+device descriptor read/64, error
 
 # Rockpi4b with u-boot 2025.10rc2 based firmware
 memory-controller: probe with driver rk3399-dmc-freq failed with error
