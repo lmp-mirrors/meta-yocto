@@ -12,6 +12,8 @@ Can't lookup blockdev
 modeset(0): failed to set mode: Invalid argument
 # minor USB setup issue
 device descriptor read/64, error
+# devicetree bug https://bugzilla.kernel.org/show_bug.cgi?id=221586
+conf-cd: cannot have multiple bias configurations
 
 # Rockpi4b with u-boot 2025.10rc2 based firmware
 memory-controller: probe with driver rk3399-dmc-freq failed with error
